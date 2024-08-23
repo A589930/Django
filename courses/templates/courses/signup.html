@@ -1,0 +1,22 @@
+{% extends 'courses/base.html' %}
+{% block title %}
+Signup
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+<h1>Signup</h1>
+
+    <div>
+        <form method="post" action='/signup'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
